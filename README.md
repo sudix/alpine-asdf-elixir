@@ -1,2 +1,2 @@
 # alpine-asdf-elixir
-Alpine Docker image with Elixir with asdf. 
+Elixir on Alpine Linux installed by [asdf-vm/asdf](https://github.com/asdf-vm/asdf).
