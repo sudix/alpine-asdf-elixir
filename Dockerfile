@@ -1,8 +1,8 @@
-FROM alpine:3.4
+FROM alpine:3.5
 
-ENV ASDF_VERSION "v0.1.0"
-ENV ERLANG_VERSION "19.1"
-ENV ELIXIR_VERSION "1.3.4"
+ENV ASDF_VERSION "v0.2.1"
+ENV ERLANG_VERSION "19.2"
+ENV ELIXIR_VERSION "1.4.0"
 
 RUN apk add --update bash curl alpine-sdk perl openssl openssl-dev ncurses ncurses-dev unixodbc unixodbc-dev openjdk8 && \
     rm -rf /var/cache/apk/* && \
