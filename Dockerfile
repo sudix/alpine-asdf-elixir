@@ -6,9 +6,8 @@ ENV ELIXIR_VERSION "1.4.2"
 
 RUN apk add --update bash curl alpine-sdk perl openssl openssl-dev ncurses ncurses-dev unixodbc unixodbc-dev openjdk8 python py-pip py-setuptools git ca-certificates curl nodejs && \
     rm -rf /var/cache/apk/* && \
-    bash && \
-    PATH="$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH" && \
-    echo "PATH=$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH" >> ~/.bashrc && \
+    export PATH="$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH" && \
+    echo "PATH=$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH" >> ~/.profile && \
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $ASDF_VERSION && \
     asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git && \
     asdf install erlang $ERLANG_VERSION && \
