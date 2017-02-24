@@ -20,4 +20,4 @@ RUN apk add --update --no-cache bash curl alpine-sdk perl openssl openssl-dev nc
     git clone https://github.com/s3tools/s3cmd.git /opt/s3cmd && \
     ln -s /opt/s3cmd/s3cmd /usr/bin/s3cmd
 
-CMD sh --login
+ENTRYPOINT sh --login
